@@ -1,0 +1,28 @@
+$(document).ready(function () {
+    var inputGet = $("#input_get");
+    inputGet.click(getMessage);
+
+
+    function getMessage() {
+        $.get("test/message", function (data, err) {
+            console.log("get data: " + data);
+            protobuf.load("proto/message.proto", function (err, root) {
+                if (err) {
+                    console.error(err);
+                    throw err;
+                }
+
+                var message = root.lookupType("Person");
+                var array = JSON.parse(data);
+                var test = Uint8Array.from(array);
+                var result = message.decode(test);
+                console.log("result: " + JSON.stringify(result));
+            });
+        });
+
+
+    }
+
+
+});
+

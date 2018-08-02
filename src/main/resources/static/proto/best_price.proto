@@ -1,0 +1,38 @@
+syntax = "proto3";
+//package protobuf;
+
+option java_package = "protobuf";
+//option java_outer_classname = "AddressBookProtos";
+
+message BestPrice{
+    int64 id =  1;
+    string quote_id =  2;
+    string issue_data_time =  3;
+    int64 bond_uni_code =  4;
+    string bond_code =  5;
+    int32 md_entry_type =  6;
+    float md_entry_px =  7;
+    float md_entry_size =  8;
+    float yield =  9;
+    string md_entry_date =  10;
+    string md_entry_time =  11;
+    int32 quote_status =  12;
+    int32 quote_price_type =  13;
+    int32 work_bench =  14;
+    string maturity_date =  15;
+    string bond_sub_type =  16;
+    string credit_rating =  17;
+    string text =  18;
+    string maturity_month_year =  19;
+    int32 underlying_price =  20;
+    int32 broker_type =  21;
+    int32 dm_bond_type =  22;
+    string tenor =  23;
+    string create_time =  24;
+    string update_time =  25;
+
+}
+
+message BestPriceList{
+    repeated BestPrice bestprice =1;
+}

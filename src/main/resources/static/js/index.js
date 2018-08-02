@@ -23,7 +23,7 @@ $(document).ready(function () {
     }
 
     function getRawMessage() {
-        var url = "https://raw.githubusercontent.com/wz2cool/fake-data/master/protobuff/price/price1.txt";
+        var url = "fakeData/protobuff/price2.txt";
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
         xhr.responseType = 'arraybuffer';
